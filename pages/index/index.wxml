@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class='header'>
+  <view class='header-box'>
+    <navigator class='header-item' hover-class="navigator-hover">热点</navigator>
+    <navigator class='header-item' hover-class="navigator-hover">关注</navigator>
+  </view>
+</view>
+<view class='nav'>
+  <view wx:for="{{titles}}" wx:key="{{index}}" class='{{idx==index?"active":""}}' data-idx='{{index}}' bindtap='handleChangeNav'>{{item}}</view>
+</view>
+<swiper class='swiper1' current='{{idx}}' bindchange='handleSwiper' circular>
+    <swiper-item  class='contant-list'>
+      <view wx:for="{{pic}}" wx:key="{{index}}" class='contant-item'>
+      <image src='{{item.img}}'></image> 
+      <text>{{item.text}}</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+        <image src='http://www.taopic.com/uploads/allimg/140625/240449-14062520191545.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514544039074&di=d2b18f8b8f9f7e2f42c8c4e6a0d798a5&imgtype=0&src=http%3A%2F%2Fmvimg1.meitudata.com%2F5654458af11156661.jpg'></image>
+    </swiper-item>
+</swiper>

@@ -1,0 +1,26 @@
+<!--pages/user/user.wxml-->
+ <view class='search_item'>
+      <view class='search_item_logo'><image src='/static/img/girl.png'></image></view>
+      <view class='search_item_content'>
+        <text class='search_item_title'>乔峰</text>
+        <text class='search_item_p'>学会乾坤大挪移</text>
+      </view>
+    </view>
+
+    <view class='nav'>
+  <view wx:for="{{titles}}" wx:key="{{index}}" class='{{idx==index?"active":""}}' data-idx='{{index}}' bindtap='handleChangeNav'>{{item}}</view>
+</view>
+<swiper class='swiper1' current='{{idx}}' bindchange='handleSwiper' circular>
+     <swiper-item>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514544039074&di=d2b18f8b8f9f7e2f42c8c4e6a0d798a5&imgtype=0&src=http%3A%2F%2Fmvimg1.meitudata.com%2F5654458af11156661.jpg'></image>
+    </swiper-item>
+    <swiper-item  class='contant-list'>
+      <view wx:for="{{pic}}" wx:key="{{index}}" class='contant-item'>
+      <image src='{{item.img}}'></image> 
+      <text>{{item.text}}</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+        <image src='http://www.taopic.com/uploads/allimg/140625/240449-14062520191545.jpg'></image>
+    </swiper-item>
+</swiper>

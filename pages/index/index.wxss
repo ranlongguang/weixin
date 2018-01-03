@@ -1,0 +1,77 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.header{
+  width: 100%;
+  height: 170rpx;
+  background: #0cc440;
+  overflow: hidden;
+}
+.header-box{
+  text-align: center;
+  width: 480rpx;
+  height: 110rpx;
+  margin-left: 150rpx;
+  background: #3dd066;
+  margin-top: 30rpx;
+  color: #a9e6bd;
+  border-radius: 60rpx;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4rpx solid #e7e7e7;
+  margin-bottom: 5rpx;
+}
+.nav view{
+  width: 33%;
+  color: #686868;
+  padding: 30rpx 0;
+  text-align: center;
+}
+.nav view.active{
+  color: green;
+  border-bottom: 4rpx solid;
+}
+.swiper1{
+  height: 1100rpx;
+}
+.contant-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header-item{
+  float: left;
+  width: 50%;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+.contant-list .contant-item{
+  width: 48%;
+  border: 1rpx solid #ddd6dd;
+  margin-top: 10rpx;
+}
+.contant-list .contant-item image{
+  width: 100%;
+}

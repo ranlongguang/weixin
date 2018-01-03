@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+form{
+  overflow: hidden;
+}
+form view{
+  padding: 0 40rpx;
+  margin-top: 40rpx;
+}
+form view input{
+  border-bottom: 2rpx solid #e7e7e7;
+  padding: 15rpx 0;
+}
+form .regest{
+  color: #666;
+}

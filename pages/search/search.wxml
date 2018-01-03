@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <input value='{{searchcontent}}' type='text' placeholder='请输入昵称'></input>
+  <button bindtap='handleSearch' size='mini' type='primary'>搜索</button>
+</view>
+
+<scroll-view class='search_body' scroll-y>
+    <view class='search_item' wx:for="{{users}}" wx:key="index">
+      <view class='search_item_logo'><image src='{{item.headUrl}}'></image></view>
+      <view class='search_item_content'>
+        <text class='search_item_title'>{{item.username}}</text>
+        <text class='search_item_p'>{{item.motto}}</text>
+      </view>
+      <view class='search_item_button'>
+        <button data-id='{{index}}' bindtap='handleFocus' type='primary' class='search_button {{item.focus?"active":""}}'>关注</button>
+      </view>
+    </view>
+</scroll-view>
+
